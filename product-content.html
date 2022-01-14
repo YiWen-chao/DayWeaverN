@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products-content</title>
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="icon" href="img/icon-title.ico">
+    <link rel="stylesheet" href="css/product.content.css">
+    <script src="/jQuery/jquery.js"></script>
+    <script src="https://kit.fontawesome.com/372814be81.js" crossorigin="anonymous"></script>
+    <script src="/js/slider_n.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="img/nav/logo_name.png" alt="">
+                </div>
+                <div class="nav-list">
+                    <div class="nav-list-upper">
+                        <img src="img/nav/cart.png" alt="">
+                        <img src="img/nav/member.png" alt="">
+                    </div>
+                    <div class="nav-list-low">
+                        <ul>
+                            <a href="">
+                                <li>所有商品</li>
+                            </a>
+                            <a href="">
+                                <li>客製化</li>
+                            </a>
+                            <a href="">
+                                <li>針織教學</li>
+                            </a>
+                            <a href="">
+                                <li>關於我們</li>
+                            </a>
+                            <a href="">
+                                <li>聯絡我們</li>
+                            </a>
+                        </ul>
+                        <div class="search-bar">
+                            <input type="text" placeholder=" search">
+                            <button id="search-btn">搜尋</button>
+                        </div>
+                        
+                    </div>
+                    <button id="btnHamburger" >
+                        <div class="header-container">
+                            <div id="header-hamburger" class="burger-trans">
+                                <span id="burger-1st"></span>
+                                <span id="burger-2nd"></span>
+                                <span id="burger-3rd"></span>
+                            </div>
+                        </div>
+                    </button>
+                    <script>
+                        let btnHamburger = document.getElementById("btnHamburger");
+                        let checkItem = document.getElementById("burger-1st").style.transform;
+
+                    function transburger(){
+                        if (checkItem ==`rotate(0deg)`){
+                            document.getElementById("burger-1st").style.transform=`rotate(45deg) translateY(-1.5px)`;
+                            document.getElementById("burger-2nd").style.transform=`scaleX(0)`;
+                            document.getElementById("burger-3rd").style.transform=`rotate(-45deg) translateY(1px)`;
+                        }
+                        else{
+                        
+                        }
+                    }
+                    function init(){
+                        btnHamburger.onclick = transburger;
+                    }
+                    window.addEventListener("load", init, false);
+                    </script>
+                    <div id="menu" class="hidden">
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-store"></i>
+                                所有商品
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                    <i class="fas fa-gift"></i>
+                                客製化
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fab fa-youtube"></i>
+                                針織教學
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-user-friends"></i>
+                                關於我們
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-phone-volume"></i>
+                                聯絡我們
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <script type="text/javascript">
+                function showMenu(){
+                    if(document.getElementById("menu").className=="hidden"){
+                        document.getElementById("menu").className = "";/* ""可以把class的名字取消*/
+                    }else{
+                        document.getElementById("menu").className = "hidden";
+                    }
+                }
+                function init(){
+                    document.getElementById("btnHamburger").onclick = showMenu;
+                }
+            window.addEventListener("load", init, false);
+            </script>
+      </header>
+    
+        <main>
+            <div class="Breadcrumbs">
+                首頁 / 商品 / DIY / 刺繡
+            </div>
+            <div class="product">
+            
+                <div class="custom-img-container">
+                    <div class="large-box">
+                        <img  id="large" src="/img/product-content/punchneedle_the_ocean.jpg">
+                    </div>
+                    <div id="shiftPanel" >
+                        <input type="button" id="btnTop" value="˄" disabled >
+                        <input type="button" id="btnBottom" value="˅" >
+                    </div>
+                        <div class="small"> 
+                            
+                            <div class="small-wrap">
+                                <div class="small-pic">
+                                    <img src="/img/product-content/punchneedle_the_desert.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="/img/product-content/punchneedle_the_mountain.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="/img/product-content/punchneedle_the_ocean.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="/img/product-content/punchneedle_the_ocean_2.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="/img/product-content/punchneedle_the_ocean_5.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            function showLarge(e){
+                            document.getElementById("large").src = e.target.src ;
+                            }
+                            
+                            function init(){
+                                let smalls = document.querySelectorAll(".small img");/*query-查詢*/
+                                for(let i=0; i<smalls.length; i++){
+                                    smalls[i].onclick = showLarge;
+                                }
+                            }
+                            
+                            window.addEventListener("load", init, false);
+                            </script>
+                        <div class="small-phone"> 
+                            
+                            <div class="small-wrap">
+                                <div class="small-pic">
+                                    <img src="/img/product-content/punchneedle_the_desert.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="/img/product-content/punchneedle_the_mountain.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="/img/product-content/punchneedle_the_ocean.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="/img/product-content/punchneedle_the_ocean_2.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="/img/product-content/punchneedle_the_ocean_5.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript" src="/js/slider.js"></script>  
+                        <script>
+                        function showLarge(e){
+                        document.getElementById("large").src = e.target.src ;
+                        }
+                        
+                        function init(){
+                            let smalls = document.querySelectorAll(".small-phone img");/*query-查詢*/
+                            for(let i=0; i<smalls.length; i++){
+                                smalls[i].onclick = showLarge;
+                            }
+                        }
+                        
+                        window.addEventListener("load", init, false);
+                        </script>
+                        
+                </div>
+                <div class="product-txt">
+                    <div class="product-title">
+                        <div class="custom-title">
+                            日出洋海
+                        </div>
+                        <div class="price">NT.300
+                        </div>
+                    </div>
+                    <div class="level">
+                        <h4>難易度</h4>
+                    <div class="star">
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    </div>
+                    <div class="description">
+                        別田八路京士四十娘教巴玉氣間您道，青寺尾個聲房幫肉申，跑七家不乙後還乞巴要壯追，裝吉月意麼國現南，
+                    </div>
+                   
+                    <div class="includes">
+                        <ul>
+                            材料包內含:
+                            <li>1) 花急回斤乍歌洋</li>
+                            <li>2) 花急回斤乍歌洋</li>
+                            <li>3) 花急回斤乍歌洋</li>
+                        </ul>
+                    </div>
+                    <div class="amount-option">
+                        <div>
+                        <label>
+                            數量
+                            <input id="amount" type="number" min="0" placeholder="  0">
+                        </label>
+                        </div>
+                    </div>
+                        <div class="purchase-button">
+                            <input id="add-to-cart" type="button" value="加入購物車">
+                            <input  id="buy-now" type="button" value="立即購買">
+                        </div>
+                </div>
+                </div>
+            </div>
+            
+        </main>
+    <div class="video-banner">
+        
+        <div class="video-description">
+            <h3>教學影片</h3>
+            <p>
+                也是行用手機要不要麼那天：早我其這次也在一起，早安們都主角事人都是我們都，設定乎都我們想太多，泡他狀況如此我的地方一集也是。看到會這，都智男人的，了很喜歡沒關係自己的只有一
+            </p>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/I6OSe6D20Ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+<div class="recommand">
+    <div class="title hot">
+        <h2>您可能還喜歡</h2>
+    </div>
+    <div class="products hot">
+        <div class="item">
+            <a href="">
+            <div class="tag trans-free">
+                免運費
+            </div>
+            <img src="img/homepage/products/p-fox.jpg" alt="">
+            <div class="product_name">
+                <h4>毛氈小物-狐狸</h4>
+            </div>
+            <div class="itemprice">
+                NT.550
+            </div>
+            </a>
+        </div>
+        <div class="item">
+            <a href="">
+            <div class="tag discount">
+                7折優惠
+            </div>
+            <img src="img/homepage/products/p-cloud.jpg" alt="">
+            <div class="product_name">
+                <h4>刺繡圈-雲朵</h4>
+            </div>
+            <div class="itemprice">
+                NT.250
+            </div>
+             </a>
+        </div>
+        <div class="item">
+            <a href="">
+            <img src="img/homepage/products/p-girl.jpg" alt="">
+            <div class="product_name">
+                刺繡圈-女孩
+            </div>
+            <div class="itemprice">
+                NT.250
+            </div>
+            </a>
+        </div>
+        <div class="item">
+            <a href="">
+            <img src="img/homepage/products/p-pair.jpg" alt="">
+            <div class="product_name">
+                毛氈小物-黃梨家族
+            </div>
+            <div class="itemprice">
+                NT.550
+            </div>
+            </a>
+        </div>
+        <div class="item">
+            <a href="">
+            <img src="img/homepage/products/sissor.jpg" alt="">
+            <div class="product_name">
+                毛線專用剪刀
+            </div>
+            <div class="itemprice">
+                NT.600
+            </div>
+            </a>
+        </div>
+        <div class="item">
+            <a href="">
+            <img src="img/homepage/products/earing.png" alt="">
+            <div class="product_name">
+                針織花耳環
+            </div>
+            <div class="itemprice">
+                NT.590
+            </div>
+            </a>
+        </div>
+    </div>
+    </div>
+</main>
+    <footer>
+        <div class="content footer-items">
+            <div class="logo-footer">
+                <img id="logo-foot" src="img/homepage/logo.png" alt="">
+                <img id="company-name-foot" src="img/homepage/company-name.png" alt="">
+            </div>
+            <div class="footer-txt">
+                <div class="footer-item">
+                    <div class="footer-title">
+                        <h3>所有商品</h3>
+                    </div>
+                    <div class="footer-text">
+                        <ul>
+                            <li><a href="">刺繡小物</a></li>
+                            <li><a href="">配飾刺繡</a></li>
+                            <li><a href="">服飾刺繡</a></li>
+                            <li><a href="">居家生活</a></li>
+                            <li><a href="">DIY自己動手做</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">
+                        <h3>客製化</h3>
+                    </div>
+                    <div class="footer-text">
+                        <ul>
+                            <li><a href="">帆布袋</a></li>
+                            <li><a href="">杯套</a></li>
+                            <li><a href="">衣服</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">
+                        <h3>針織教學</h3>
+                    </div>
+                    <div class="footer-text">
+                        <ul>
+                            <li><a href="">刺繡針法</a></li>
+                            <li><a href="">十字繡針法</a></li>
+                            <li><a href="">戳戳繡針法</a></li>
+                            <li><a href="">羊毛氈教學</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">
+                        <h3>會員專區</h3>
+                    </div>
+                    <div class="footer-text">
+                        <ul>
+                            <li><a href="">登入會員</a></li>
+                            <li><a href="">註冊會員</a></li>
+                        </ul>
+                    </div>
+                </div><div class="footer-item">
+                    <div class="footer-title">
+                        <h3>主題企劃</h3>
+                    </div>
+                </div><div class="footer-item">
+                    <div class="footer-title">
+                        <h3>賣家中心</h3>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <div class="footer-title">
+                        <h3>聯絡我們</h3>
+                    </div>
+                    <div class="footer-text">
+                        <div class="contact">
+                            E-mail:123456@gmail.com<br>
+                            Tel:02-2356-7799
+                        </div>
+                        <ul id="social-media-icons">
+                            <li><i class="fab fa-facebook-square fa-2x"></i></li>
+                            <li><i class="fab fa-instagram-square fa-2x"></i></li>
+                            <li><i class="fab fa-line fa-2x"></i></li>
+                            <li><i class="fab fa-pinterest-square fa-2x"></i></li>
+                            <li><i class="fab fa-twitter-square fa-2x"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

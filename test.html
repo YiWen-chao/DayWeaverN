@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.header-hamburger {
+    display: block;
+    width: 20px;
+    height: 15px;
+    line-height: 15px;
+    position: relative;
+    top: 14px;
+    right: 15px;
+    float: right;
+    margin: 0;
+    transform: rotate(0deg);
+    cursor: pointer;
+}
+
+.header-hamburger span {
+    display: block;
+    position: absolute;
+    height: 2.5px;
+    width: 100%;
+    background: rgb(38, 38, 38);
+    box-sizing: border-box;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    transition-property: transform, opacity;
+}
+
+.header-hamburger span:nth-child(1) {
+    top: 0px;
+    transform-origin: left center;
+    /* transform: rotate(45deg) translateY(-1.5px); */
+}
+
+.header-hamburger span:nth-child(2) {
+    top: 6px;
+    transform-origin: left center;
+    /* transform: scaleX(0);
+    opacity: 0; */
+}
+
+.header-hamburger span:nth-child(3) {
+    top: 12px;
+    transform-origin: left center;
+    /* transform: rotate(-45deg) translateY(1px); */
+}
+</style>
+</head>
+<body>
+
+<div class="header-container">
+  <div class="header-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+<div>
+</body>
+</html>
+
+

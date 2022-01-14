@@ -1,0 +1,301 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration: none;
+}
+/*設定開始*/
+body{
+	background-color: #FFFAF8;
+}
+.container{
+    width: 100%;
+    max-width: 1280px;
+	margin: auto;
+	
+}
+nav{
+    background-color: #fce4d5;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 7px 8px 13px -13px rgba(0,0,0,0.62);
+	padding: 10px 20px 10px 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.nav-list-low{
+	display: flex;
+	display: none;
+}
+.nav-list-low ul{
+	display: flex;
+}
+.nav-list-low a{
+	font-size: 16px;
+	/* color: white; */
+	color:rgb(99, 99, 99);
+	text-decoration: none;
+	font-weight: 500;
+	margin: 10px 15px;
+}
+header{
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+}
+.logo img{
+	width: 70px;
+}
+.nav-list-upper{
+	display: none;
+}
+
+/*hamburger menu*/
+
+#btnHamburger {
+	z-index: 4;
+	width:44px;
+	height:30px;
+	display:block;
+	position:relative;
+	background-color: transparent;
+	border: none;
+}	
+
+#menu {
+	position:fixed;
+	right:0px;
+	top:70px;
+	width:100%;
+	height:100%;
+	padding-left:6px;
+	padding-top: 20px;
+	background-color:rgb(255, 255, 255, 0.911);
+	transition: top 1s;/*要滑出來用css寫比較好*/
+	/* border: 1px solid deeppink; */
+	z-index: -1;
+}
+#menu.hidden{/*如果加上空格，就是menu內的hidden，而非menu.hidden*/
+	position:fixed;
+	right:0px;
+	top:-1000px;
+	width:100%;
+	height:100%;
+	padding-left:6px;
+	background-color:rgba(255, 255, 255, 0.911);
+	transition: top 1s;
+	z-index: -1;
+}
+.menu-list{
+	text-align: center;
+	padding: 30px 0;
+	position: relative;
+	font-size: 20px;
+}
+
+.divider{
+	margin: auto;
+	background-color: grey;
+	width: 150px;
+	height: 1.5px;
+	margin-top: 10px;
+}
+.mu-list{
+	color: rgb(99, 99, 99);
+	display: block;
+}
+
+#header-hamburger {
+    display: block;
+    width: 20px;
+    height: 15px;
+    line-height: 15px;
+    position: relative;
+    float: right;
+    margin: 0;
+    transform: rotate(0deg);
+    cursor: pointer;
+}
+
+#header-hamburger span {
+    display: block;
+    position: absolute;
+    height: 2.5px;
+    width: 100%;
+    background: rgb(38, 38, 38);
+    box-sizing: border-box;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    transition-property: transform, opacity;
+}
+
+#header-hamburger span:nth-child(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+#header-hamburger span:nth-child(2) {
+    top: 6px;
+    transform-origin: left center;
+    /* transform: scaleX(0);
+    opacity: 0; */
+}
+a{
+	text-decoration: none;
+}
+#header-hamburger span:nth-child(3) {
+    top: 12px;
+    transform-origin: left center;
+    /* transform: rotate(-45deg) translateY(1px); */
+}
+/*md 平板直up*/
+
+.search-bar{
+	margin-top: 5px;
+	margin-left: 25px;
+	
+}
+.search-bar input{
+	/* border: 2px solid #353030; */
+	border-radius: 20px;
+	background-color: #ffffff;
+	font-size:16px;
+	border: none;
+	width: 165px;
+}
+#search-btn{
+	background-color: #ffffff;
+	color: #525252;
+	border: none ;/*清除btn格式*/
+	border-radius: 20px;
+	padding: 0px 9px ;
+	font-size: 13px;
+	position: relative;
+	right: 50px;
+	outline: none;
+	box-shadow: none;
+}
+
+@media screen and (min-width:768px) {
+	.nav-list-upper{
+		display: flex;
+		justify-content: end;
+	}
+	.nav-list-upper img{
+		width: 30px;
+	}
+	#btnHamburger{
+		display: none;
+	}
+	.nav-list-low{
+		display: flex;
+	}
+	.nav-list-low ul{
+		display: flex;
+	}
+	.nav-list-low a{
+		font-size: 15px;
+		/* color: white; */
+		color:rgb(99, 99, 99);
+		text-decoration: none;
+		font-weight: 500;
+		margin: 10px 6px;
+	}
+	#menu{
+		display: none;
+	}
+	main{
+		padding-top: 150px;
+	}
+}
+ /*xl桌機*/
+@media screen and (min-width: 1200px){
+	.nav-list-upper{
+		display: flex;
+		justify-content: end;
+	}
+	.nav-list-upper img{
+		width: 30px;
+	}
+	#btnHamburger{
+		display: none;
+	}
+	.logo{
+		width: 10%;
+	}
+	.logo img{
+		width: 100%;
+	}
+	.nav-list-low{
+		display: flex;
+	}
+	.nav-list-low ul{
+		display: flex;
+	}
+	.nav-list-low a{
+		font-size: 16px;
+		/* color: white; */
+		color:rgb(99, 99, 99);
+		text-decoration: none;
+		font-weight: 500;
+		margin: 10px 15px;
+	}
+	#menu{
+		display: none;
+	}
+	main{
+		padding-top: 150px;
+	}
+	.logo img{
+		width: 120px;
+	}
+}
+
