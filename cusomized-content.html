@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized-content</title>
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="icon" href="img/icon-title.ico">
+    <link rel="stylesheet" href="css/costomized.content.css">
+    <script src="jQuery/jquery.js"></script>
+    <script src="https://kit.fontawesome.com/372814be81.js" crossorigin="anonymous"></script>
+    <script src="js/slider_n.js"></script>
+    <link rel="stylesheet" href="assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owl.theme.default.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="img/nav/logo_name.png" alt="">
+                </div>
+                <div class="nav-list">
+                    <div class="nav-list-upper">
+                        <img src="img/nav/cart.png" alt="">
+                        <img src="img/nav/member.png" alt="">
+                    </div>
+                    <div class="nav-list-low">
+                        <ul>
+                            <a href="">
+                                <li>所有商品</li>
+                            </a>
+                            <a href="">
+                                <li>客製化</li>
+                            </a>
+                            <a href="">
+                                <li>針織教學</li>
+                            </a>
+                            <a href="">
+                                <li>關於我們</li>
+                            </a>
+                            <a href="">
+                                <li>聯絡我們</li>
+                            </a>
+                        </ul>
+                        <div class="search-bar">
+                            <input type="text" placeholder=" search">
+                            <button id="search-btn">搜尋</button>
+                        </div>
+                        
+                    </div>
+                    <button id="btnHamburger" >
+                        <div class="header-container">
+                            <div id="header-hamburger" class="burger-trans">
+                                <span id="burger-1st"></span>
+                                <span id="burger-2nd"></span>
+                                <span id="burger-3rd"></span>
+                            </div>
+                        </div>
+                    </button>
+                    <script>
+                        let btnHamburger = document.getElementById("btnHamburger");
+                        let checkItem = document.getElementById("burger-1st").style.transform;
+
+                    function transburger(){
+                        if (checkItem ==`rotate(0deg)`){
+                            document.getElementById("burger-1st").style.transform=`rotate(45deg) translateY(-1.5px)`;
+                            document.getElementById("burger-2nd").style.transform=`scaleX(0)`;
+                            document.getElementById("burger-3rd").style.transform=`rotate(-45deg) translateY(1px)`;
+                        }
+                        else{
+                        
+                        }
+                    }
+                    function init(){
+                        btnHamburger.onclick = transburger;
+                    }
+                    window.addEventListener("load", init, false);
+                    </script>
+                    <div id="menu" class="hidden">
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-store"></i>
+                                所有商品
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                    <i class="fas fa-gift"></i>
+                                客製化
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fab fa-youtube"></i>
+                                針織教學
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-user-friends"></i>
+                                關於我們
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-phone-volume"></i>
+                                聯絡我們
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <script type="text/javascript">
+                function showMenu(){
+                    if(document.getElementById("menu").className=="hidden"){
+                        document.getElementById("menu").className = "";/* ""可以把class的名字取消*/
+                    }else{
+                        document.getElementById("menu").className = "hidden";
+                    }
+                }
+                function init(){
+                    document.getElementById("btnHamburger").onclick = showMenu;
+                }
+            window.addEventListener("load", init, false);
+            </script>
+      </header>
+    
+        <main>
+            <div class="Breadcrumbs">
+                首頁 / 商品 / DIY / 刺繡
+            </div>
+            <div class="addToCart">
+                <input id="add-to-cart-fixed" type="button" value="加入購物車">
+                <input  id="buy-now-fixed" type="button" value="立即購買">
+            </div>
+            <div class="custom-list">
+                <h3>客製化商品</h3>
+                <h4>一件，就能做。
+                    自己的要有質感。</h4>
+                <ul>
+                    <li>帆布袋</li>
+                    <li>名字吊牌</li>
+                    <li>T-shirt</li>
+                    <li>客製包包</li>
+                    <li>耳環</li>
+                    <li>襪子</li>
+                    <li>相片</li>
+                </ul>
+            </div>
+            <div class="product">
+                <div class="custom-img-container">
+                    <div class="large-box">
+                        <img id="large" src="img/custom-content/girl-earing-bag.jpg">
+                        <a href=""><i id="like-icon" class="far fa-heart"></i></a>
+                        <a href=""><i id="add-icon" class="fas fa-shopping-cart"></i></a>
+                    </div>
+                    <div id="shiftPanel" >
+                        <input type="button" id="btnTop" value="˄" disabled >
+                        <input type="button" id="btnBottom" value="˅" >
+                    </div>
+                        <div class="small"> 
+                            
+                            <div class="small-wrap">
+                                <div class="small-pic">
+                                    <img src="img/custom-content/girl-earing-pattern.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="img/custom-content/girl-earing.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="img/custom-content/girl-glass-bag.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="img/custom-content/girl-glass.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="img/custom-content/girl-earing-bag.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            function showLarge(e){
+                            document.getElementById("large").src = e.target.src ;
+                            }
+                            
+                            function init(){
+                                let smalls = document.querySelectorAll(".small img");/*query-查詢*/
+                                for(let i=0; i<smalls.length; i++){
+                                    smalls[i].onclick = showLarge;
+                                }
+                            }
+                            
+                            window.addEventListener("load", init, false);
+                            </script>
+                        <div class="small-phone"> 
+                            
+                            <div class="small-wrap">
+                                <div class="small-pic">
+                                    <img src="img/custom-content/girl-earing-pattern.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="img/custom-content/girl-earing.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="img/custom-content/girl-glass-bag.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="img/custom-content/girl-glass.jpg"/>
+                                </div>
+                                <div class="small-pic">
+                                    <img src="img/custom-content/girl-earing-bag.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript" src="/js/slider.js"></script>  
+                        <script>
+                        function showLarge(e){
+                        document.getElementById("large").src = e.target.src ;
+                        }
+                        
+                        function init(){
+                            let smalls = document.querySelectorAll(".small-phone img");/*query-查詢*/
+                            for(let i=0; i<smalls.length; i++){
+                                smalls[i].onclick = showLarge;
+                            }
+                        }
+                        
+                        window.addEventListener("load", init, false);
+                        </script>
+                        
+                </div>
+                <div class="product-txt">
+                    <div class="custom-option">
+                        <div class="custom-title">
+                            客  製   |    帆布環保袋A款
+                        </div>
+                        <div class="custom-subtitle">
+                            尺寸規格 : 
+                        </div>
+                        <div class="description">
+                            高38cm 寬30cm ±2cm (可依照需求訂製尺寸)
+                        </div>
+                        <div class="custom-subtitle">
+                            顏色規格 : 
+                        </div>
+                        <div class="color-option">
+            
+                            <div class="color-btn">
+                                <button id="color-weat">米色</button>
+                                <button id="color-white">白色</button>
+                                <button id="color-black">黑色</button>
+                            </div>
+                        </div>
+                        <div class="custom-subtitle">
+                            圖樣規格選擇: 
+                        </div>
+                        <div class="font-options">
+                            <div class="lang">
+                                <label>
+                                    圖樣大小
+                                    <select>
+                                        <option> 請 選 擇</option>
+                                        <option>小 5cm x 5cm </option>
+                                        <option>中 8cm x 8cm</option>
+                                        <option>大 10cm x 10cm</option>
+                                        <option>特大 15cm x 15cm</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="lang">
+                                <label>
+                                    色彩數量    
+                                    <select>
+                                        <option> 請 選 擇</option>
+                                        <option>單色</option>
+                                        <option>雙色</option>
+                                        <option>三色</option>
+                                        <option>四色(含)以上</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="additional">
+                            <div class="custom-subtitle add">
+                                優惠加購
+                            </div>
+                            <div class="add-background">
+                                <div class="add-line">
+                                    <label>
+                                        <input type="checkbox">
+                                        文字刺繡
+                                    </label>
+                                    <div class="notes">
+                                        (中文 - 一行7字元 / 英文- 一行12字元)
+                                    </div>
+                                </div>
+                                <div class="add-img">
+                                    <label>
+                                        <input type="checkbox">
+                                        客製禮品標籤
+                                    </label>
+                                    <div class="notes">
+                                        可自訂圖稿，客製圖稿規格 長5cm 寬5cm
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            <div class="amount-option">
+                                <div>
+                                <label>
+                                    訂製數量
+                                    <input id="amount" type="number" min="0" placeholder="  0">
+                                </label>
+                                </div>
+                                <button id="range-price">$價格區間</button>
+                            </div>
+                        <div class="custiom-option grey">
+                            <div class="purchase-button">
+                                <input id="add-to-cart" type="button" value="加入購物車">
+                                <input  id="buy-now" type="button" value="立即購買">
+                            </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="recommand">
+    
+                <div class="title hot">
+                    
+                    <h2>作品範例</h2>
+                </div>
+                <div class="owl-carousel owl-theme products">
+                    <div class="item">
+                        <a href="">
+                        <div class="hot-img">
+                            <img src="img/custom-content/butterfly-bag.jpg" alt="">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                        <div class="hot-img">
+                            <img src="img/custom-content/butterfly-pattern.jpg" alt="">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                        <div class="hot-img">
+                            <img src="img/custom-content/flower-bag.jpg" alt="">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                        <div class="hot-img">
+                            <img src="img/custom-content/flower-pattern.jpg" alt="">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                        <div class="hot-img">
+                            <img src="img/custom-content/girl-glass-bag.jpg" alt="">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                        <div class="hot-img">
+                            <img src="img/custom-content/girl-glass.jpg" alt="">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                        <div class="hot-img">
+                            <img src="img/custom-content/girl-bag.jpg" alt="">
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                        <div class="hot-img">
+                            <img src="img/custom-content/girl-patern.jpg" alt="">
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                <script src="assets/owl.carousel.min.js"></script>
+                                <script>
+            
+                                var owl = $('.owl-carousel');
+                                owl.owlCarousel({
+                                    items:4,
+                                    loop:true,
+                                    margin:80,
+                        
+                                    smartSpeed:2000,
+                                    responsive:{
+                                        0:{
+                                            items:2,
+                                            nav:true
+                                        },
+                                
+                                        600:{
+                                            items:3,
+                                            nav:false
+                                        },
+                                        1000:{
+                                            items:5,
+                                            nav:true,
+                                            loop:false
+                                        }
+                                    }
+                                    
+                                });
+                                </script>
+        </main>
+        <footer>
+            <div class="content footer-items">
+                <div class="logo-footer">
+                    <img id="logo-foot" src="img/homepage/logo.png" alt="">
+                    <img id="company-name-foot" src="img/homepage/company-name.png" alt="">
+                </div>
+                <div class="footer-txt">
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>所有商品</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">刺繡小物</a></li>
+                                <li><a href="">配飾刺繡</a></li>
+                                <li><a href="">服飾刺繡</a></li>
+                                <li><a href="">居家生活</a></li>
+                                <li><a href="">DIY自己動手做</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>客製化</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">帆布袋</a></li>
+                                <li><a href="">杯套</a></li>
+                                <li><a href="">衣服</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>針織教學</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">刺繡針法</a></li>
+                                <li><a href="">十字繡針法</a></li>
+                                <li><a href="">戳戳繡針法</a></li>
+                                <li><a href="">羊毛氈教學</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>會員專區</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">登入會員</a></li>
+                                <li><a href="">註冊會員</a></li>
+                            </ul>
+                        </div>
+                    </div><div class="footer-item">
+                        <div class="footer-title">
+                            <h3>主題企劃</h3>
+                        </div>
+                    </div><div class="footer-item">
+                        <div class="footer-title">
+                            <h3>賣家中心</h3>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>聯絡我們</h3>
+                        </div>
+                        <div class="footer-text">
+                            <div class="contact">
+                                E-mail:123456@gmail.com<br>
+                                Tel:02-2356-7799
+                            </div>
+                            <ul id="social-media-icons">
+                                <li><i class="fab fa-facebook-square fa-2x"></i></li>
+                                <li><i class="fab fa-instagram-square fa-2x"></i></li>
+                                <li><i class="fab fa-line fa-2x"></i></li>
+                                <li><i class="fab fa-pinterest-square fa-2x"></i></li>
+                                <li><i class="fab fa-twitter-square fa-2x"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
