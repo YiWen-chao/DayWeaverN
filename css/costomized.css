@@ -1,0 +1,590 @@
+main{
+	/* background-attachment: fixed; */
+	overflow: hidden;
+    background:url(background-costum.png);
+    background-attachment: fixed;
+}
+.background-fix{
+    position: fixed;
+    z-index: -1;
+    margin-top: -100px;
+}
+.Breadcrumbs{
+	font-size: 14px;
+	color: rgb(65, 45, 45);
+	width: 80%;
+	margin: auto;
+	padding-bottom:30px ;
+}
+.theme{
+    
+}
+.content-background{
+    background-color: transparent;
+}
+.custom-title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: #353030;
+    line-height: 1.5;
+}
+
+.custom-title h1{
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+}
+.custom-title h2{
+    position: relative;
+    font-size: 20px;
+}
+
+
+#line-1{
+    opacity: 0;
+	position: relative;
+    white-space: nowrap;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    z-index: 2;
+    color: #353030;
+    margin: 20px 0;
+    
+}
+.line-1-anime{
+	animation-name: quote-1;
+	animation-duration: 3s;  
+  	animation-fill-mode: forwards;
+}
+@keyframes quote-1 {
+	from {right:-70%;}
+	to {right:-45%;}
+	0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+
+
+#line-2{
+    opacity: 0;
+	position: relative;
+    white-space: nowrap;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    z-index: 2;
+    color: #353030;
+    padding-bottom: 200px;
+    
+}
+.line-2-anime{
+	animation-name: quote-2;
+	animation-duration: 3s;  
+  	animation-fill-mode: forwards;
+}
+@keyframes quote-2 {
+	from {left:-70%;}
+	to {left:43%;}
+	0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+.girl{
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+}
+.girl img{
+    width: 35%;
+}
+
+/*可能喜歡*/
+.recommand{
+	width:80%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+.hot h2{
+	display: flex;
+	margin-top: 50px;
+	font-size: 22px;
+	font-weight: 700;
+	color: rgb(56, 12, 12);
+	margin-bottom: 20px;
+}
+.item img{
+	width: 10%;
+	padding-top: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 10px 0px 10px -13px rgba(0,0,0,0.62);
+	
+}
+.hot-img{
+	width: 100%;
+	margin: auto;
+}
+.product_name{
+	font-size: 16px;
+	color:grey;
+	text-align: left;
+	margin-left: 10%;
+	margin-top: 5%;
+	font-weight: 700;
+
+}
+.item .price{
+	text-align: left;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 10px 0 0 15px;
+	padding-bottom: 10px;
+	color: rgb(59, 15, 15);
+	/* margin-left: 10%; */
+}
+
+#Previous,#Next{
+	font-size: 30px;
+	position: absolute;
+	z-index: 3;
+}
+#Previous{
+	left: 10px;
+	margin-left: -10%;
+	top:40%;
+}
+#Next{
+	right: 10px;
+	margin-right: -13%;/*手機-20%*/
+	top:40%;
+}
+
+/*客製化瀑布*/
+.custom-choices{
+    position: relative;
+    background-color: transparent;
+
+}
+.scroll{
+    margin-top: 20px;
+    Animation: opacity 1s;
+    animation: blink-animation 1s steps(5, start) infinite;
+    }
+@keyframes blink-animation {
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
+
+.item-costom{
+    position: relative;
+}
+/*襪子*/
+.sock img{
+    width: 100%;
+    box-shadow:10px 10px 20px -13px rgba(0,0,0,0.62);
+}
+.sock{
+    margin: auto;
+    width: 20%;
+}
+.sock{
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    box-shadow:10px 10px 20px -13px rgba(0,0,0,0.62);
+    border-top-right-radius: 30px;
+}
+.sock::before{
+	position: absolute;
+    content:" 一雙 獨一無二的襪子， \A 陪你 / 你重要的 他 \A 走出最 uniqe 的路! \A  \A NT.320起 ";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 150px 2.5px 0 2.5px;
+    background-color: #31515c71;
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top: 80%;
+    transition: 1s;
+}
+.sock::after{
+	position: absolute;
+    content:"襪子文字刺繡";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 80px;
+    /* background-color: #31515c71; */
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top:60%;
+    transition: 1s;
+}
+.sock:hover.sock::before{
+    top:0%;
+}
+.sock:hover.sock::after{
+    top:0%;
+}
+
+
+/*中間三個選項*/
+.img-row{
+    display: flex;
+    justify-content: center;
+}
+
+/*名牌*/
+
+.custom-nametag{
+    margin: auto;
+    padding: 15px;
+    position: relative; 
+    top:-10%;
+    left: 30%;
+    width:60%;
+}
+.custom-nametag img{
+    width: 100%;
+    box-shadow:10px 10px 20px -13px rgba(0,0,0,0.62);
+}
+
+.custom-nametag-img{
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    box-shadow:10px 10px 20px -13px rgba(0,0,0,0.62);
+    border-top-left-radius: 30px;
+}
+
+.custom-nametag-img::before{
+	position: absolute;
+    content:"給孩子的專屬溫暖， \A 讓他擁有最特別的愛 \A  \A NT.400起";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 165px 2.5px 0 2.5px;
+    background-color: #31515c71;
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top: 80%;
+    transition: 1s;
+}
+.custom-nametag-img::after{
+	position: absolute;
+    content:"名字吊牌 \A[手繪+刺繡] ";
+    line-height: 1.9;
+    white-space: pre-line;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 70px;
+    /* background-color: #31515c71; */
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top:60%;
+    transition: 1s;
+}
+.custom-nametag-img:hover.custom-nametag-img::before{
+    top:0%;
+}
+.custom-nametag-img:hover.custom-nametag-img::after{
+    top:0%;
+}
+
+
+/*T-Shirt*/
+.T-shirt img{
+    width: 100%;
+    box-shadow:10px 10px 20px -13px rgba(0,0,0,0.62);
+
+}
+.T-shirt{
+    position: relative;
+    margin: auto;
+    width: 45%;
+    padding: 15px;
+    top:11%;
+    left: -8%;
+}
+.T-shirt-img{
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    box-shadow:10px 10px 20px -13px rgba(0,0,0,0.62);
+    border-top-left-radius: 30px;
+}
+.T-shirt-img::before{
+	position: absolute;
+    content:" 只有一件，專屬你~\A 用繡的，才永久 \A  \A NT.320起";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 80px 2.5px 0 2.5px;
+    background-color: #31515c71;
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top: 70%;
+    transition: 1s;
+}
+.T-shirt-img::after{
+	position: absolute;
+    content:"T-Shirt客製";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 40px;
+    /* background-color: #31515c71; */
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top:58%;
+    transition: 1s;
+}
+.T-shirt-img:hover.T-shirt-img::before{
+    top:0%;
+}
+.T-shirt-img:hover.T-shirt-img::after{
+    top:0%;
+}
+
+/*耳環*/
+.earing {
+    width: 70%;
+    position: relative;
+    box-shadow:10px 10px 20px -13px rgba(0,0,0,0.62);
+    top:16%;
+    right: 27%;
+    
+}
+.earing img{
+    width:100%;
+}
+.earing-img{
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border-top-right-radius: 30px;
+}
+.earing-img::before{
+	position: absolute;
+    content:" 原來可以 \A 優雅的很不一般\A \A NT. 1 , 500起 ";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 180px 2.5px 0 2.5px;
+    background-color: #31515c71;
+    width:100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top: 80%;
+    transition: 1s;
+}
+.earing-img::after{
+	position: absolute;
+    content:" 刺繡耳環 ";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 100px;
+    /* background-color: #31515c71; */
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top:60%;
+    transition: 1s;
+}
+.earing-img:hover.earing-img::before{
+    top:0%;
+}
+.earing-img:hover.earing-img::after{
+    top:0%;
+}
+/*相片*/
+.family{
+    width: 60%;
+    position: relative;
+    margin: auto;
+    padding: 15px;
+    top:-5%;
+    left:29%;
+}
+.family img{
+    width: 100%;
+}
+.family-img{
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    box-shadow:10px 10px 20px -13px rgba(0,0,0,0.62);
+    border-top-left-radius: 40px;
+}
+.family-img::before{
+	position: absolute;
+    content:" 把瞬間變為，\A 洗不壞、摔不碎的永恆。\A \A NT. 450起";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 150px 2.5px 0 2.5px;
+    background-color: #31515c71;
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top: 80%;
+    transition: 1s;
+}
+.family-img::after{
+	position: absolute;
+    content:" 相片刺繡 ";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 80px;
+    /* background-color: #31515c71; */
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top:65%;
+    transition: 1s;
+}
+.family-img:hover.family-img::before{
+    top:0%;
+}
+.family-img:hover.family-img::after{
+    top:0%;
+}
+/*提袋*/
+.bag{
+    width: 35%;
+    position: relative;
+    top:20%;
+    right:-16%;
+
+}
+.bag img{
+    width: 100%;
+    box-shadow:10px 10px 20px -13px rgba(0,0,0,0.62);
+}
+
+.bag-img{
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    box-shadow:10px 10px 20px -13px rgba(0,0,0,0.62);
+    border-top-right-radius: 30px;
+}
+.bag-img::before{
+	position: absolute;
+    content:"不一樣 \A 就是要「袋」著走 \A  \A NT. 250起";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 150px 2.5px 0 2.5px;
+    background-color: #31515c71;
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top: 80%;
+    transition: 1s;
+}
+.bag-img::after{
+	position: absolute;
+    content:" 帆布袋 ";
+    line-height: 1.5;
+    white-space: pre-line;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 80px;
+    /* background-color: #31515c71; */
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    left: 0px;
+    top:57%;
+    transition: 1s;
+}
+.bag-img:hover.bag-img::before{
+    top:0%;
+}
+.bag-img:hover.bag-img::after{
+    top:0%;
+}
+
+
+
+
+
+
+
+/*手機*/
+@media screen and (max-width: 767px){
+	main{
+		background-color: rgb(255, 231, 220);
+	}
+
+	
+}
+
+
+/*平板*/
+
+@media screen and (min-width:768px){
+	.container{
+		/* background-image: url("background_工作區域\ 1.png"); */
+		/* background-attachment: fixed; */
+	}
+	
+	
+}
+
+
+/*桌--------------機*/
+
+@media screen and (min-width: 1200px){
+	.container{
+		/* background-image: url("background_工作區域\ 1.png"); */
+		/* background-attachment: fixed; */
+	}
+	
+}

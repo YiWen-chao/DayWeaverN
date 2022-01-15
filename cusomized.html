@@ -7,7 +7,7 @@
     <title>Customized-content</title>
     <link rel="stylesheet" href="css/share.css">
     <link rel="icon" href="img/icon-title.ico">
-    <link rel="stylesheet" href="css/costomized.content.css">
+    <link rel="stylesheet" href="css/costomized.css">
     <script src="jQuery/jquery.js"></script>
     <script src="https://kit.fontawesome.com/372814be81.js" crossorigin="anonymous"></script>
     <script src="js/slider_n.js"></script>
@@ -136,202 +136,125 @@
             <div class="Breadcrumbs">
                 首頁 / 商品 / DIY / 刺繡
             </div>
-            <div class="addToCart">
-                <input id="add-to-cart-fixed" type="button" value="加入購物車">
-                <input  id="buy-now-fixed" type="button" value="立即購買">
+            <div class="custom-title">
+                <h1>客 製 化 服 務</h1>
+                <h2>Customization</h2>
+                <!-- <div class="scroll"><i class="fas fa-angle-double-down fa-xs"></i></div> -->
             </div>
-            <div class="custom-list">
-                <h3>客製化商品</h3>
-                <h4>一件，就能做。
-                    自己的要有質感。</h4>
-                <ul>
-                    <li>帆布袋</li>
-                    <li>名字吊牌</li>
-                    <li>T-shirt</li>
-                    <li>客製包包</li>
-                    <li>耳環</li>
-                    <li>襪子</li>
-                    <li>相片</li>
-                </ul>
-            </div>
-            <div class="product">
-                <div class="custom-img-container">
-                    <div class="large-box">
-                        <img id="large" src="img/custom-content/girl-earing-bag.jpg">
-                        <a href=""><i id="like-icon" class="far fa-heart"></i></a>
-                        <a href=""><i id="add-icon" class="fas fa-shopping-cart"></i></a>
-                    </div>
-                    <div id="shiftPanel" >
-                        <input type="button" id="btnTop" value="˄" disabled >
-                        <input type="button" id="btnBottom" value="˅" >
-                    </div>
-                        <div class="small"> 
-                            
-                            <div class="small-wrap">
-                                <div class="small-pic">
-                                    <img src="img/custom-content/girl-earing-pattern.jpg"/>
-                                </div>
-                                <div class="small-pic">
-                                    <img src="img/custom-content/girl-earing.jpg"/>
-                                </div>
-                                <div class="small-pic">
-                                    <img src="img/custom-content/girl-glass-bag.jpg"/>
-                                </div>
-                                <div class="small-pic">
-                                    <img src="img/custom-content/girl-glass.jpg"/>
-                                </div>
-                                <div class="small-pic">
-                                    <img src="img/custom-content/girl-earing-bag.jpg"/>
-                                </div>
-                            </div>
-                        </div>
-                        <script>
-                            function showLarge(e){
-                            document.getElementById("large").src = e.target.src ;
-                            }
-                            
-                            function init(){
-                                let smalls = document.querySelectorAll(".small img");/*query-查詢*/
-                                for(let i=0; i<smalls.length; i++){
-                                    smalls[i].onclick = showLarge;
-                                }
-                            }
-                            
-                            window.addEventListener("load", init, false);
-                            </script>
-                        <div class="small-phone"> 
-                            
-                            <div class="small-wrap">
-                                <div class="small-pic">
-                                    <img src="img/custom-content/girl-earing-pattern.jpg"/>
-                                </div>
-                                <div class="small-pic">
-                                    <img src="img/custom-content/girl-earing.jpg"/>
-                                </div>
-                                <div class="small-pic">
-                                    <img src="img/custom-content/girl-glass-bag.jpg"/>
-                                </div>
-                                <div class="small-pic">
-                                    <img src="img/custom-content/girl-glass.jpg"/>
-                                </div>
-                                <div class="small-pic">
-                                    <img src="img/custom-content/girl-earing-bag.jpg"/>
-                                </div>
-                            </div>
-                        </div>
-
-                        <script type="text/javascript" src="/js/slider.js"></script>  
-                        <script>
-                        function showLarge(e){
-                        document.getElementById("large").src = e.target.src ;
-                        }
-                        
-                        function init(){
-                            let smalls = document.querySelectorAll(".small-phone img");/*query-查詢*/
-                            for(let i=0; i<smalls.length; i++){
-                                smalls[i].onclick = showLarge;
-                            }
-                        }
-                        
-                        window.addEventListener("load", init, false);
-                        </script>
-                        
-                </div>
-                <div class="product-txt">
-                    <div class="custom-option">
-                        <div class="custom-title">
-                            客  製   |    帆布環保袋A款
-                        </div>
-                        <div class="custom-subtitle">
-                            尺寸規格 : 
-                        </div>
-                        <div class="description">
-                            高38cm 寬30cm ±2cm (可依照需求訂製尺寸)
-                        </div>
-                        <div class="custom-subtitle">
-                            顏色規格 : 
-                        </div>
-                        <div class="color-option">
             
-                            <div class="color-btn">
-                                <button id="color-weat">米色</button>
-                                <button id="color-white">白色</button>
-                                <button id="color-black">黑色</button>
-                            </div>
+            <div class="girl">
+                <img src="img/customization/girl.png" alt="">
+            </div>
+            <div id="line-1">
+                <h1>一件，就能做。</h1>
+            </div>
+            <div id="line-2">
+                <h1>自己的，要有質感</h1>
+            </div>
+            <script>
+                window.addEventListener("scroll",function(){
+                if(document.documentElement.scrollTop > 100){
+                    document.getElementById("line-1").classList.add("line-1-anime");}
+                
+            })
+            </script>
+            <script>
+                window.addEventListener("scroll",function(){
+                if(document.documentElement.scrollTop > 100){
+                    document.getElementById("line-2").classList.add("line-2-anime");}
+                
+            })
+            </script>
+            <div class="custom-choices">
+                <div class="sockitem">
+                    <a href="customized-content.html">
+                        <div class="sock">
+                        <img src="img/homepage/customized/sock.jpg" alt="客製襪子">
                         </div>
-                        <div class="custom-subtitle">
-                            圖樣規格選擇: 
-                        </div>
-                        <div class="font-options">
-                            <div class="lang">
-                                <label>
-                                    圖樣大小
-                                    <select>
-                                        <option> 請 選 擇</option>
-                                        <option>小 5cm x 5cm </option>
-                                        <option>中 8cm x 8cm</option>
-                                        <option>大 10cm x 10cm</option>
-                                        <option>特大 15cm x 15cm</option>
-                                    </select>
-                                </label>
-                            </div>
-                            <div class="lang">
-                                <label>
-                                    色彩數量    
-                                    <select>
-                                        <option> 請 選 擇</option>
-                                        <option>單色</option>
-                                        <option>雙色</option>
-                                        <option>三色</option>
-                                        <option>四色(含)以上</option>
-                                    </select>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="additional">
-                            <div class="custom-subtitle add">
-                                優惠加購
-                            </div>
-                            <div class="add-background">
-                                <div class="add-line">
-                                    <label>
-                                        <input type="checkbox">
-                                        文字刺繡
-                                    </label>
-                                    <div class="notes">
-                                        (中文 - 一行7字元 / 英文- 一行12字元)
-                                    </div>
+                    </a>
+                </div>
+                
+                <div class="img-row">
+                    <div class="item-costom nametag">
+                        <div class="custom-nametag">
+                            <a href="customized-content.html">
+                                <div class="custom-nametag-img">
+                                    <img src="img/homepage/customized/custom-nametag.jpg" alt="">
                                 </div>
-                                <div class="add-img">
-                                    <label>
-                                        <input type="checkbox">
-                                        客製禮品標籤
-                                    </label>
-                                    <div class="notes">
-                                        可自訂圖稿，客製圖稿規格 長5cm 寬5cm
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-                        
-                            <div class="amount-option">
-                                <div>
-                                <label>
-                                    訂製數量
-                                    <input id="amount" type="number" min="0" placeholder="  0">
-                                </label>
+                    </div>
+                    <div class="item-costom">
+                        <div class="T-shirt">
+                            <a href="customized-content.html">
+                                <div class="T-shirt-img">
+                                    <img src="img/homepage/customized/T-shirt.jpg" alt="">
                                 </div>
-                                <button id="range-price">$價格區間</button>
-                            </div>
-                        <div class="custiom-option grey">
-                            <div class="purchase-button">
-                                <input id="add-to-cart" type="button" value="加入購物車">
-                                <input  id="buy-now" type="button" value="立即購買">
-                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-costom">
+                        <div class="earing">
+                            <a href="customized-content.html">
+                                <div class="earing-img">
+                                    <img src="img/homepage/customized/earing.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div class="img-row">
+                    <div class="item-costom">
+                        <div class="family">
+                            <a href="customized-content.html">
+                                <div class="family-img">
+                                    <img src="img/homepage/customized/family.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-costom">
+                        <div class="bag">
+                            <a href="customized-content.html">
+                                <div class="bag-img">
+                                    <img src="img/homepage/customized/custom-bag.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="process">
+                <h1>客製化流程</h1>
+                <h2>Process</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="img/custom/step-01.png" alt="">
+                     </div>
+    
+                    <div class="col-3">
+                        <img src="img/custom/step-02.png" alt="">
+    
+                    </div>
+                    <div class="col-3">
+                        <img src="img/custom/step-03.png" alt="">
+                    </div>
+                    
+                    <div class="col-3 finish">
+                        
+                        <div class="txt">
+                            <h3>完成囉!</h3>
+                            <h4>送出訂單!</h4>
+                        </div>
+                        <div class="finish-img">
+                            <img id="lightbulb"src="img/custom/step-04.png" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>  
             <div class="recommand">
                 <div class="title hot">
                     <h2>作品範例</h2>
@@ -425,6 +348,7 @@
                                     
                                 });
                                 </script>
+            
         </main>
         <footer>
             <div class="content footer-items">
