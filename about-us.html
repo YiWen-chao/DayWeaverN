@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized-content</title>
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="icon" href="img/icon-title.ico">
+    <link rel="stylesheet" href="css/about-us.css">
+    <script src="https://kit.fontawesome.com/372814be81.js" crossorigin="anonymous"></script>
+    <script src="js/slider_n.js"></script>
+    <link rel="stylesheet" href="assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owl.theme.default.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="img/nav/logo_name.png" alt="">
+                </div>
+                <div class="nav-list">
+                    <div class="nav-list-upper">
+                        <img src="img/nav/cart.png" alt="">
+                        <img src="img/nav/member.png" alt="">
+                    </div>
+                    <div class="nav-list-low">
+                        <ul>
+                            <a href="">
+                                <li>所有商品</li>
+                            </a>
+                            <a href="">
+                                <li>客製化</li>
+                            </a>
+                            <a href="">
+                                <li>針織教學</li>
+                            </a>
+                            <a href="">
+                                <li>關於我們</li>
+                            </a>
+                            <a href="">
+                                <li>聯絡我們</li>
+                            </a>
+                        </ul>
+                        <div class="search-bar">
+                            <input type="text" placeholder=" search">
+                            <button id="search-btn">搜尋</button>
+                        </div>
+                        
+                    </div>
+                    <button id="btnHamburger" >
+                        <div class="header-container">
+                            <div id="header-hamburger" class="burger-trans">
+                                <span id="burger-1st"></span>
+                                <span id="burger-2nd"></span>
+                                <span id="burger-3rd"></span>
+                            </div>
+                        </div>
+                    </button>
+                    <script>
+                        let btnHamburger = document.getElementById("btnHamburger");
+                        let checkItem = document.getElementById("burger-1st").style.transform;
+
+                    function transburger(){
+                        if (checkItem ==`rotate(0deg)`){
+                            document.getElementById("burger-1st").style.transform=`rotate(45deg) translateY(-1.5px)`;
+                            document.getElementById("burger-2nd").style.transform=`scaleX(0)`;
+                            document.getElementById("burger-3rd").style.transform=`rotate(-45deg) translateY(1px)`;
+                        }
+                        else{
+                        
+                        }
+                    }
+                    function init(){
+                        btnHamburger.onclick = transburger;
+                    }
+                    window.addEventListener("load", init, false);
+                    </script>
+                    <div id="menu" class="hidden">
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-store"></i>
+                                所有商品
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                    <i class="fas fa-gift"></i>
+                                客製化
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fab fa-youtube"></i>
+                                針織教學
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-user-friends"></i>
+                                關於我們
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-phone-volume"></i>
+                                聯絡我們
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <script type="text/javascript">
+                function showMenu(){
+                    if(document.getElementById("menu").className=="hidden"){
+                        document.getElementById("menu").className = "";/* ""可以把class的名字取消*/
+                    }else{
+                        document.getElementById("menu").className = "hidden";
+                    }
+                }
+                function init(){
+                    document.getElementById("btnHamburger").onclick = showMenu;
+                }
+            window.addEventListener("load", init, false);
+            </script>
+      </header>
+    
+        <main>
+            <div class="Breadcrumbs">
+                首頁 / 商品 / DIY / 刺繡
+            </div>
+            <div class="wrap">
+                <div class="banner">
+                  <video id="video" playsinline autoplay muted loop >
+                    <source src="img/aboutus/tutorial-page.mp4" type="video/mp4">
+                  </video>
+                  <h2>關 於 我 們</h2>
+                  <!-- <h2 id="en-title">About Us</h2> -->
+                  <h2 id="quotation">DayWeaver，手織流年，讓你的日子，充滿溫度</h2>
+                </div>
+              </div>
+              <div class="phone-title">
+                <h1>關於我們</h1>
+                <h2>About Us</h2>
+                <!-- <div class="scroll"><i class="fas fa-angle-double-down fa-xs"></i></div> -->
+            </div>
+              <div class="item">
+                <div class="fox">
+                    <img src="img/aboutus/aboutus_Do.png" alt="">
+                  </div>
+                  <div class="intro">
+                      <h2>織日子</h2>
+                      <h3>創意手創織物平台</h3>
+                    賽可體定利這放。親人行讀，色辦濟，在最雜子賽無不馬住友其送身歌還是觀的持相去黑做無康麼生日得水士張地色長只學吃可在紀可求而：卻分電出下才大出中銷以放公……看能且產少，照千外能上線好雄話，路歡南大民如、時字主直想裡與。心媽非說最坐護一跑風數正；答行太高乎國。賽可體定利這放。親人行讀，色辦濟，在最雜子賽無不馬住友其送身歌還是觀的持相去黑做無康麼生日得水士張地色長只學吃可在紀可求而：卻分電出下才大出中銷以放公……看能且產少，照千外能上線好雄話，路歡南大民如、時字主直想裡與。心媽非說最坐護一跑風數正；答行太高乎國。
+                  </div>
+                
+              </div>
+              <div class="team">
+                  <h2>我們的團隊</h2>
+                  <p>
+                    賽可體定利這放。親人行讀，色辦濟，在最雜子賽無不馬住友其送身歌還是觀的持相去黑做無康麼生日得水士張地色長只學吃可在紀可求而：卻分電出下才大出中銷以放公……看能且產少，照千外能上線好雄話
+                </p>
+                <div class="avatars">
+                    <div class="row">
+                        <div class="person">
+                            
+                            <img src="https://i.pravatar.cc/300?img=31" alt="">
+                            <h4>Olivia</h4>
+                            <h4>藝術總監</h4>
+                        </div>
+                        <div class="person">
+                            <img src="https://i.pravatar.cc/300?img=24" alt="">
+                            <h4>Selina</h4>
+                            <h4>行銷公關</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="person">
+                            <img src="https://i.pravatar.cc/300?img=41" alt="">
+                            <h4>Emma</h4>
+                            <h4>媒體設計</h4>
+                        </div>
+                        <div class="person">
+                            <img src="https://i.pravatar.cc/300?img=33" alt="">
+                            <h4>Hank</h4>
+                            <h4>營運行銷</h4>
+                        </div>
+                    </div>
+            
+                    <div class="person">
+                        <img src="https://i.pravatar.cc/300?img=32" alt="">
+                        <h4>Victoria</h4>
+                        <h4>物流管理</h4>
+                    </div>
+        
+                </div>
+              </div>
+        </main>
+        <footer>
+            <div class="content footer-items">
+                <div class="logo-footer">
+                    <img id="logo-foot" src="img/homepage/logo.png" alt="">
+                    <img id="company-name-foot" src="img/homepage/company-name.png" alt="">
+                </div>
+                <div class="footer-txt">
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>所有商品</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">刺繡小物</a></li>
+                                <li><a href="">配飾刺繡</a></li>
+                                <li><a href="">服飾刺繡</a></li>
+                                <li><a href="">居家生活</a></li>
+                                <li><a href="">DIY自己動手做</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>客製化</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">帆布袋</a></li>
+                                <li><a href="">杯套</a></li>
+                                <li><a href="">衣服</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>針織教學</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">刺繡針法</a></li>
+                                <li><a href="">十字繡針法</a></li>
+                                <li><a href="">戳戳繡針法</a></li>
+                                <li><a href="">羊毛氈教學</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>會員專區</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">登入會員</a></li>
+                                <li><a href="">註冊會員</a></li>
+                            </ul>
+                        </div>
+                    </div><div class="footer-item">
+                        <div class="footer-title">
+                            <h3>主題企劃</h3>
+                        </div>
+                    </div><div class="footer-item">
+                        <div class="footer-title">
+                            <h3>賣家中心</h3>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>聯絡我們</h3>
+                        </div>
+                        <div class="footer-text">
+                            <div class="contact">
+                                E-mail:123456@gmail.com<br>
+                                Tel:02-2356-7799
+                            </div>
+                            <ul id="social-media-icons">
+                                <li><i class="fab fa-facebook-square fa-2x"></i></li>
+                                <li><i class="fab fa-instagram-square fa-2x"></i></li>
+                                <li><i class="fab fa-line fa-2x"></i></li>
+                                <li><i class="fab fa-pinterest-square fa-2x"></i></li>
+                                <li><i class="fab fa-twitter-square fa-2x"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
