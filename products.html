@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products-content</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="icon" href="img/icon-title.ico">
+    <link rel="stylesheet" href="css/products.css">
+    <script src="jQuery/jquery.js"></script>
+    <script src="https://kit.fontawesome.com/372814be81.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="img/nav/logo_name.png" alt="">
+                </div>
+                <div class="nav-list">
+                    <div class="nav-list-upper">
+                        <img src="img/nav/cart.png" alt="">
+                        <img src="img/nav/member.png" alt="">
+                    </div>
+                    <div class="nav-list-low">
+                        <ul>
+                            <a href="">
+                                <li>所有商品</li>
+                            </a>
+                            <a href="">
+                                <li>客製化</li>
+                            </a>
+                            <a href="">
+                                <li>針織教學</li>
+                            </a>
+                            <a href="">
+                                <li>關於我們</li>
+                            </a>
+                            <a href="">
+                                <li>聯絡我們</li>
+                            </a>
+                        </ul>
+                        <div class="search-bar">
+                            <input type="text" placeholder=" search">
+                            <button id="search-btn">搜尋</button>
+                        </div>
+                        
+                    </div>
+                    <button id="btnHamburger" >
+                        <div class="header-container">
+                            <div id="header-hamburger" class="burger-trans">
+                                <span id="burger-1st"></span>
+                                <span id="burger-2nd"></span>
+                                <span id="burger-3rd"></span>
+                            </div>
+                        </div>
+                    </button>
+                    <script>
+                        let btnHamburger = document.getElementById("btnHamburger");
+                        let checkItem = document.getElementById("burger-1st").style.transform;
+
+                    function transburger(){
+                        if (checkItem ==`rotate(0deg)`){
+                            document.getElementById("burger-1st").style.transform=`rotate(45deg) translateY(-1.5px)`;
+                            document.getElementById("burger-2nd").style.transform=`scaleX(0)`;
+                            document.getElementById("burger-3rd").style.transform=`rotate(-45deg) translateY(1px)`;
+                        }
+                        else{
+                        
+                        }
+                    }
+                    function init(){
+                        btnHamburger.onclick = transburger;
+                    }
+                    window.addEventListener("load", init, false);
+                    </script>
+                    <div id="menu" class="hidden">
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-store"></i>
+                                所有商品
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                    <i class="fas fa-gift"></i>
+                                客製化
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fab fa-youtube"></i>
+                                針織教學
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-user-friends"></i>
+                                關於我們
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                        <a class="mu-list" href="">
+                            <div class="menu-list">
+                                <i class="fas fa-phone-volume"></i>
+                                聯絡我們
+                                <div class="divider"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <script type="text/javascript">
+                function showMenu(){
+                    if(document.getElementById("menu").className=="hidden"){
+                        document.getElementById("menu").className = "";/* ""可以把class的名字取消*/
+                    }else{
+                        document.getElementById("menu").className = "hidden";
+                    }
+                }
+                function init(){
+                    document.getElementById("btnHamburger").onclick = showMenu;
+                }
+            window.addEventListener("load", init, false);
+            </script>
+      </header>
+    
+        <main>
+            
+            <div class="Breadcrumbs">
+                首頁 / 商品 / DIY / 刺繡
+            </div>
+            <div class="container-main">
+                <div class="title">
+                    <h1>商 品 物 件</h1>
+                    <h2>Products</h2>
+                </div>
+                <img id="bird-icon" src="img/products/bird-icon.png" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2 filter">
+                            <div class="filter-border">                  
+                                <h3>篩選器</h3>
+                                <ul id="filter-sorts">
+                                    <li id="sort">
+                                        <ul>種類
+                                            <label>
+                                            <li><input type="checkbox" class="checkbox">
+                                                <span class="box">
+                                                    <span class="check">v</span>
+                                                </span>
+                                                刺繡小物
+                                                </li>
+                                            </label>
+                                            <label>
+                                            <li><input type="checkbox" class="checkbox">
+                                                <span class="box">
+                                                    <span class="check">v</span>
+                                                </span>
+                                                配飾刺繡
+                                                </li>
+                                            </label>
+                                            <label>
+                                            <li><input type="checkbox" class="checkbox">
+                                                <span class="box">
+                                                <span class="check">v</span>
+                                                </span>
+                                                服飾刺繡
+                                                </li>
+                                            </label>
+                                            <label>
+                                            <li><input type="checkbox" class="checkbox"><span class="box">
+                                                <span class="check">v</span>
+                                                </span>
+                                                居家生活
+                                                </li>
+                                            </label>
+                                            <label>
+                                            <li><input type="checkbox" class="checkbox">
+                                                <span class="box">
+                                                    <span class="check">v</span>
+                                                </span>
+                                                DIY自己動手做
+                                                </li>
+                                            </label>
+                                            
+        
+                                                
+                                                    
+                                        </ul>
+                                    </li>
+                                    <li id="sort">
+                                        <ul>主題
+                                            <label>
+                                                <li><input type="checkbox" class="checkbox">
+                                                    <span class="box">
+                                                        <span class="check">v</span>
+                                                    </span>動物</li>
+                                            </label>
+                                            <label>
+                                                <li><input type="checkbox" class="checkbox">
+                                                    <span class="box">
+                                                        <span class="check">v</span>
+                                                    </span>流行</li>
+                                            </label>
+                                            <label>
+                                                <li><input type="checkbox" class="checkbox">
+                                                    <span class="box">
+                                                        <span class="check">v</span>
+                                                    </span>花</li>
+                                            </label>
+                                            <label>
+                                                <li><input type="checkbox" class="checkbox">
+                                                    <span class="box">
+                                                        <span class="check">v</span>
+                                                    </span>自然</li>
+                                            </label>
+                                            <label>
+                                                <li><input type="checkbox" class="checkbox">
+                                                    <span class="box">
+                                                        <span class="check">v</span>
+                                                    </span>情侶</li>
+                                            </label>
+                                        </ul>
+        
+                                    </li>
+                                    <li id="sort">
+                                        <ul>針織法
+                                            <label>
+                                                <li><input type="checkbox" class="checkbox">
+                                                    <span class="box">
+                                                        <span class="check">v</span>
+                                                    </span>刺繡</li>
+                                            </label>
+                                            <label>
+                                                <li><input type="checkbox" class="checkbox">
+                                                    <span class="box">
+                                                        <span class="check">v</span>
+                                                    </span>戳戳繡</li>
+                                            </label>
+                                            <label>
+                                                <li><input type="checkbox" class="checkbox">
+                                                    <span class="box">
+                                                        <span class="check">v</span>
+                                                    </span>羊毛氈</li>
+                                            </label>
+                                            <label>
+                                                <li><input type="checkbox" class="checkbox">
+                                                    <span class="box">
+                                                        <span class="check">v</span>
+                                                    </span>十字繡</li>
+                                            </label>
+                                        </ul>
+                                    <li id="sort">價格</li>
+                                    
+                                </ul>
+                                <div>
+                                    <label>
+                                        <input type="range">
+                                    </label>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="filter-phone">
+                            <div class="order">
+                                <label>
+                                    <select>
+                                        <option>種類</option>
+                                        <option>刺繡小物</option>
+                                        <option>配飾刺繡</option>
+                                        <option>服飾刺繡</option>
+                                        <option>居家生活</option>
+                                        <option>DIY自己動手做</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="order">
+                                <label>
+                                    <select>
+                                        <option>主題</option>
+                                        <option>動物</option>
+                                        <option>流行</option>
+                                        <option>花</option>
+                                        <option>自然</option>
+                                        <option>情侶</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="order">
+                                <label>
+                                    <select>
+                                        <option>針織法</option>
+                                        <option>刺繡</option>
+                                        <option>戳戳繡</option>
+                                        <option>羊毛氈</option>
+                                        <option>十字繡</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="order">   
+                                <label>
+                                    <select>
+                                        <option>價格</option>
+                                        <option>最熱銷</option>
+                                        <option>價格從高至低</option>
+                                        <option>價格從低至高</option>
+                                        <option>上架時間</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="search-bar-custom">
+                            <input id="search-box" type="text" placeholder=" search">
+                            <button id="search-custom">搜尋</button>
+                        </div>
+                        <div class="col-10">
+                            <div class="products-pack">
+                                <div class="product-amount">
+                                    <h5>商品數量:</h5>
+                                    <h3>1,024</h3>
+                                </div>
+                                <div class="order">   
+                                    <h3>排序依照:</h3>
+                                    <label>
+                                        <select>
+                                            <option>請選擇</option>
+                                            <option>最熱銷</option>
+                                            <option>價格從高至低</option>
+                                            <option>價格從低至高</option>
+                                            <option>上架時間</option>
+                                        </select>
+                                    </label>
+                                </div>
+                               
+                            </div>
+                          
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/sissor.jpg" alt="">
+                                        <div class="product_name">
+                                            毛線專用剪刀
+                                        </div>
+                                        <div class="price">
+                                            NT.600
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-girl.jpg" alt="">
+                                        <div class="product_name">
+                                            刺繡圈-女孩
+                                        </div>
+                                        <div class="price">
+                                            NT.250
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-pair.jpg" alt="">
+                                        <div class="product_name">
+                                            毛氈小物-梨家族
+                                        </div>
+                                        <div class="price">
+                                            NT.550
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-cloud.jpg" alt="">
+                                        <div class="product_name">
+                                            <h4>刺繡圈-雲朵</h4>
+                                        </div>
+                                        <div class="price">
+                                            NT.250
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <div class="tag trans-free">
+                                            免運費
+                                        </div>
+                                        <img src="img/homepage/products/p-fox.jpg" alt="">
+                                        <div class="product_name">
+                                            <h4>毛氈小物-狐狸</h4>
+                                        </div>
+                                        <div class="price">
+                                            NT.550
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-girl.jpg" alt="">
+                                        <div class="product_name">
+                                            刺繡圈-女孩
+                                        </div>
+                                        <div class="price">
+                                            NT.250
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-pair.jpg" alt="">
+                                        <div class="product_name">
+                                            毛氈小物-梨家族
+                                        </div>
+                                        <div class="price">
+                                            NT.550
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/sissor.jpg" alt="">
+                                        <div class="product_name">
+                                            毛線專用剪刀
+                                        </div>
+                                        <div class="price">
+                                            NT.600
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-girl.jpg" alt="">
+                                        <div class="product_name">
+                                            刺繡圈-女孩
+                                        </div>
+                                        <div class="price">
+                                            NT.250
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-pair.jpg" alt="">
+                                        <div class="product_name">
+                                            毛氈小物-梨家族
+                                        </div>
+                                        <div class="price">
+                                            NT.550
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-cloud.jpg" alt="">
+                                        <div class="product_name">
+                                            <h4>刺繡圈-雲朵</h4>
+                                        </div>
+                                        <div class="price">
+                                            NT.250
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <div class="tag trans-free">
+                                            免運費
+                                        </div>
+                                        <img src="img/homepage/products/p-fox.jpg" alt="">
+                                        <div class="product_name">
+                                            <h4>毛氈小物-狐狸</h4>
+                                        </div>
+                                        <div class="price">
+                                            NT.550
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-girl.jpg" alt="">
+                                        <div class="product_name">
+                                            刺繡圈-女孩
+                                        </div>
+                                        <div class="price">
+                                            NT.250
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-pair.jpg" alt="">
+                                        <div class="product_name">
+                                            毛氈小物-梨家族
+                                        </div>
+                                        <div class="price">
+                                            NT.550
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/sissor.jpg" alt="">
+                                        <div class="product_name">
+                                            毛線專用剪刀
+                                        </div>
+                                        <div class="price">
+                                            NT.600
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-girl.jpg" alt="">
+                                        <div class="product_name">
+                                            刺繡圈-女孩
+                                        </div>
+                                        <div class="price">
+                                            NT.250
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-pair.jpg" alt="">
+                                        <div class="product_name">
+                                            毛氈小物-梨家族
+                                        </div>
+                                        <div class="price">
+                                            NT.550
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="item">
+                                        <a href="product-content.html">
+                                        <img src="img/homepage/products/p-cloud.jpg" alt="">
+                                        <div class="product_name">
+                                            <h4>刺繡圈-雲朵</h4>
+                                        </div>
+                                        <div class="price">
+                                            NT.250
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                              
+                            </div>
+        
+                        </div>
+                    </div>
+                        <div class="pages">
+                            <ul>
+                                Pages :
+                            <li><a href="">上一頁</a></li>
+                            <li id="active"><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">5</a></li>
+                            <li><a href="">6</a></li>
+                            <li><a href="">7</a></li>
+                            <li><a href="">8</a></li>
+                            <li><a href="">9</a></li>
+                            <li><a href="">10</a></li>
+                            <li><a href="">下一頁</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="content footer-items">
+                <div class="logo-footer">
+                    <img id="logo-foot" src="img/homepage/logo.png" alt="">
+                    <img id="company-name-foot" src="img/homepage/company-name.png" alt="">
+                </div>
+                <div class="footer-txt">
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>所有商品</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">刺繡小物</a></li>
+                                <li><a href="">配飾刺繡</a></li>
+                                <li><a href="">服飾刺繡</a></li>
+                                <li><a href="">居家生活</a></li>
+                                <li><a href="">DIY自己動手做</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>客製化</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">帆布袋</a></li>
+                                <li><a href="">杯套</a></li>
+                                <li><a href="">衣服</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>針織教學</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">刺繡針法</a></li>
+                                <li><a href="">十字繡針法</a></li>
+                                <li><a href="">戳戳繡針法</a></li>
+                                <li><a href="">羊毛氈教學</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>會員專區</h3>
+                        </div>
+                        <div class="footer-text">
+                            <ul>
+                                <li><a href="">登入會員</a></li>
+                                <li><a href="">註冊會員</a></li>
+                            </ul>
+                        </div>
+                    </div><div class="footer-item">
+                        <div class="footer-title">
+                            <h3>主題企劃</h3>
+                        </div>
+                    </div><div class="footer-item">
+                        <div class="footer-title">
+                            <h3>賣家中心</h3>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-title">
+                            <h3>聯絡我們</h3>
+                        </div>
+                        <div class="footer-text">
+                            <div class="contact">
+                                E-mail:123456@gmail.com<br>
+                                Tel:02-2356-7799
+                            </div>
+                            <ul id="social-media-icons">
+                                <li><i class="fab fa-facebook-square fa-2x"></i></li>
+                                <li><i class="fab fa-instagram-square fa-2x"></i></li>
+                                <li><i class="fab fa-line fa-2x"></i></li>
+                                <li><i class="fab fa-pinterest-square fa-2x"></i></li>
+                                <li><i class="fab fa-twitter-square fa-2x"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

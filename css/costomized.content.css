@@ -446,7 +446,7 @@ select{
 
 @media screen and (min-width:768px){
 	.container{
-		background-image: url("background_工作區域\ 1.png");
+		background-image: url("texture-background.jpg");
 		background-attachment: fixed;
 	}
 	.addToCart{
@@ -461,7 +461,7 @@ select{
 		display: flex;
 		padding-bottom: 30px;
 		margin-bottom: 40px;
-		background-color: #fff5f1;
+		background-color: #f0e9e3;
 	}
 	.price{
 		font-size: 24px;
@@ -593,14 +593,14 @@ select{
 
 @media screen and (min-width: 1200px){
 	.container{
-		background-image: url("background_工作區域\ 1.png");
+		background-image: url("texture-background.jpg");
 		background-attachment: fixed;
 	}
 	.addToCart{
 		display: none;
 	}
 	.product{
-		background-color: #fff5f1;
+		background-color: #f0e9e3;
 		width: 80%;
 		border-radius: 20px;
 		margin: auto;

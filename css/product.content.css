@@ -98,7 +98,7 @@ main{
 }
 #buy-now{
 	border:none;
-	background-color: #FFA101;
+	background-color: #c79f95;
 	border-radius: 8px;
 	height: 40px;
 	padding: 0 20px;
@@ -271,7 +271,7 @@ iframe{
 		position: fixed;
 		z-index: 5;
 		top:90%;
-		background-color: #e9905c;
+		background-color: #f0ab9c;
 		padding-bottom: 50px;
 		width: 100%;
 		border-radius: 20px;
@@ -466,7 +466,7 @@ iframe{
 
 @media screen and (min-width:768px){
 	.container{
-		background-image: url("background_工作區域\ 1.png");
+		background-image: url("texture-background.jpg");
 		background-attachment: fixed;
 	}
 	.addToCart{
@@ -481,7 +481,7 @@ iframe{
 		display: flex;
 		padding-bottom: 30px;
 		margin-bottom: 40px;
-		background-color: #fff5f1;
+		background-color: #f0e9e3;
 	}
 	.price{
 		font-size: 24px;
@@ -663,14 +663,14 @@ iframe{
 
 @media screen and (min-width: 1200px){
 	.container{
-		background-image: url("background_工作區域\ 1.png");
+		background-image: url("texture-background.jpg");
 		background-attachment: fixed;
 	}
 	.addToCart{
 		display: none;
 	}
 	.product{
-		background-color: #fff5f1;
+		background-color: #f0e9e3;
 		width: 80%;
 		border-radius: 20px;
 		margin: auto;
