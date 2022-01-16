@@ -90,6 +90,7 @@
 	left: 80%;
 	top:-50px;
 	line-height: 1.5;
+	color: #353030;
 	/* top: -40px; */
     
 }
@@ -252,6 +253,7 @@ display: block;
 }
 #description p{
 	margin-top: 50px;
+	line-height: 2;
 }
 .anime-descript{
 	animation-name: des;
@@ -260,7 +262,7 @@ display: block;
 }
 @keyframes des{
 	from {right: -400px;}
-	to {right: 0%;}
+	to {right: 0;}
 	0% {opacity: 0;}
   /* 50% {opacity: 0;} */
   100% {opacity: 1;}
@@ -585,6 +587,7 @@ display: block;
 		font-weight: 700;
 		font-size: 16px;
 		width: 100%;
+		line-height: 1.5;
 		color: #535353;
 	}
 	iframe{
@@ -842,8 +845,7 @@ display: block;
 		animation-fill-mode: forwards;
 	}
 	@keyframes des{
-		from {right: -100px;}
-		to {top: 20px;}
+
 		0% {opacity: 0;}
 	/* 50% {opacity: 0;} */
 	100% {opacity: 1;}
@@ -1289,12 +1291,10 @@ display: block;
 }
 .anime-descript{
 	animation-name: des;
-	animation-duration: 3s;  
+	animation-duration:3s;  
   	animation-fill-mode: forwards;
 }
 @keyframes des{
-	from {right: -100px;}
-	to {top: 20px;}
 	0% {opacity: 0;}
   /* 50% {opacity: 0;} */
   100% {opacity: 1;}
