@@ -2,6 +2,13 @@ main{
 	background-attachment: fixed;
 	overflow: hidden;
 }
+.Breadcrumbs{
+	font-size: 14px;
+	color: rgb(65, 45, 45);
+	width: 80%;
+	margin: auto;
+	padding-bottom:30px ;
+}
 .custom-img-container{
     width: 100%;
     align-items: center;
@@ -42,16 +49,24 @@ background-color: white;
 /*客製化選單*/
 .custom-list h3{
 	text-align: center;
-	font-size: 26px;
+	font-size: 20px;
 	font-weight:700;
-	color: rgb(65, 45, 45);
+	color: rgb(71, 53, 53);
 	margin-bottom: 20px;
 }
 .custom-list h4{
 	text-align: center;
 	color: rgb(65, 45, 45);
 	margin-bottom: 40px;
-	font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+
+}
+.custom-list h2{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.5;
 }
 
 .custom-title{
@@ -103,12 +118,11 @@ background-color: white;
 	margin-right: -13%;/*手機-20%*/
 	top:40%;
 }
-.Breadcrumbs{
-	font-size: 14px;
-	color: rgb(65, 45, 45);
-	width: 80%;
-	margin: auto;
-	padding-bottom:30px ;
+.shorts{
+	display: flex;
+}
+.phone-row{
+	display: flex;
 }
 
 
@@ -116,9 +130,29 @@ background-color: white;
 @media screen and (max-width: 767px){
 	main{
 		background-color: rgb(255, 231, 220);
+		padding-top: 100px;
 	}
-    
-	
+	.container{
+		background-image: url("texture-background.jpg");
+		background-attachment: fixed;
+	}
+    .phone-row{
+		display: flex;
+		justify-content: center;
+	}
+	.shorts{
+		display: block;
+		background-color: white;
+		width: 90%;
+		margin: auto;
+		border-radius: 20px;
+	}
+	#Previous,#Next{
+		display: none;
+	}
+	.products{
+		margin-left: 20px;
+	}
 }
 
 

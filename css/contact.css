@@ -1,0 +1,204 @@
+main{
+	background-attachment: fixed;
+    
+	overflow: hidden;
+}
+.Breadcrumbs{
+	font-size: 14px;
+	color: rgb(65, 45, 45);
+	width: 80%;
+	margin: auto;
+	padding-bottom:30px ;
+}
+.contact-title{
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+   line-height: 1.5;
+}
+.girl-hat{
+    width: 40%;
+    margin: auto;
+}
+.girl-hat img{
+    width: 100%;
+}
+.page-theme{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content:center; 
+    position: relative;
+}
+
+
+
+h2{
+    font-size: 20px;
+    color: #353030;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.form{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+.label{
+    border:1px solid #532d2d8c;
+    font-size: 20px;
+    border-radius: 5px;
+    
+    
+}
+.message{
+    margin-top: 10px;
+}
+#Nameinput{
+    width: 100px;
+    margin-right: 15px;
+}
+#Emailinput{
+    width: 220px;
+}
+
+textarea{
+    margin-top: 10px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    /* border: 1px solid grey; */
+    border:1px solid #532d2d8c;
+}
+.info-content{
+    width: 50%;
+}
+.title{
+    width: 25%;
+}
+.title h2{
+    font-weight: 700;
+}
+.title p{
+    margin-bottom: 20px;
+    line-height: 2;
+    font-size: 16px;
+    font-weight: 300;
+}
+.info{
+    line-height: 2;
+    margin: 0 40px;
+
+}
+.info h4{
+    font-weight: 700;
+}
+.inforow{
+	display: flex;
+}
+.submit-button{
+	display:block;
+}
+#submit{
+	border:none;
+	background-color: rgb(65, 45, 45);
+	border-radius: 8px;
+	height: 35px;
+	padding: 0 20px;
+	color: white;
+	font-size: 16px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+
+/*手機*/
+@media screen and (max-width: 767px){
+	main{
+		background-color: rgb(255, 231, 220);
+        background:url(background-costum.png);
+		padding-top: 100px;
+	}
+    .girl-hat{
+        width: 80%;
+        margin: auto;
+
+    }
+	.page-theme{
+        display: block;
+    }
+    .inforow{
+        display: block;
+        width: 100%;
+    }
+    .title{
+        width: 80%;
+        margin: auto;
+    }
+    .map{
+        display: flex;
+        justify-content: center;
+        margin:auto;
+    }
+    .info-content{
+        width: 50%;
+        margin: auto;
+    }
+    .info{
+        width: 100%;
+        margin-left: -60px;
+        margin-bottom: 20px;
+    }
+    #Emailinput{
+        width: 150px;
+        
+    }
+    .row{
+        width: 85%;
+        margin: auto;
+    }
+}
+
+
+/*平板*/
+
+@media screen and (min-width:768px){
+	.container{
+		background-image: url("texture-background.jpg");
+		background-attachment: fixed;
+	}
+
+	.page-theme::before{
+        content: '';
+        width: 50%;
+        height: 1px;
+        background-color: #353030;
+        position: absolute;
+        top:280px;
+        z-index: 2;
+    }
+	
+}
+
+
+/*桌--------------機*/
+
+@media screen and (min-width: 1200px){
+	.container{
+		background-image: url("texture-background.jpg");
+		background-attachment: fixed;
+	}
+	
+    .page-theme::before{
+        content: '';
+        width: 50%;
+        height: 1px;
+        background-color: #353030;
+        position: absolute;
+        top:280px;
+        z-index: 2;
+    }
+}
