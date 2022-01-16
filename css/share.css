@@ -75,6 +75,9 @@ nav{
 .nav-list-low ul{
 	display: flex;
 }
+.nav-list-low li{
+	font-size: 16px;
+}
 .nav-list-low a{
 	font-size: 16px;
 	/* color: white; */
@@ -313,7 +316,22 @@ footer{
 	color: #3f3f3f;
 	line-height: 1.5;
 }
-
+@media screen and (max-width: 767px){
+	footer{
+		padding-top: 20px;
+	}
+	.footer-txt{
+		display: none;
+	}
+	.logo-footer{
+		justify-content:center;
+		margin-left: 0px;
+		width: 40%;
+	}
+	.logo-footer img{
+		width: 100%;
+	}
+}
 @media screen and (min-width:768px) {
 	.nav-list-upper{
 		display: flex;

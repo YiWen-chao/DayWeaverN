@@ -1,0 +1,158 @@
+main{
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.custom-img-container{
+    width: 100%;
+    align-items: center;
+}
+.shorts{
+    display: flex;
+    justify-content: center;
+    /* margin-top: 40px; */
+
+}
+.short{
+    text-align: center;
+    margin:20px 30px 50px 30px;
+	display:block ;
+	transition: .5s;
+
+}
+.short:hover{
+	margin-top: -2px;
+}
+
+.short img{
+    width: 60px;
+}
+.short h2{
+    font-size: 16px;
+    color: rgb(39, 37, 36);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.item{
+background-color: white;
+}
+.hidden-c{
+    display: none;
+}
+
+/*客製化選單*/
+.custom-list h3{
+	text-align: center;
+	font-size: 26px;
+	font-weight:700;
+	color: rgb(65, 45, 45);
+	margin-bottom: 20px;
+}
+.custom-list h4{
+	text-align: center;
+	color: rgb(65, 45, 45);
+	margin-bottom: 40px;
+	font-weight: 700;
+}
+
+.custom-title{
+    font-size: large;
+}
+
+
+.recommand{
+	width:90%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+.hot h2{
+	display: flex;
+	margin-top: 50px;
+	font-size: 22px;
+	font-weight: 700;
+	color: rgb(56, 12, 12);
+	margin-bottom: 20px;
+}
+
+.hot-img{
+	width: 100%;
+	margin: auto;
+}
+.product_name{
+	font-size: 16px;
+	color:grey;
+	text-align: left;
+	margin-left: 10%;
+	margin-top: 5%;
+	font-weight: 700;
+
+}
+
+
+#Previous,#Next{
+	font-size: 30px;
+	position: absolute;
+	z-index: 3;
+}
+#Previous{
+	left: 10px;
+	margin-left: -10%;
+	top:40%;
+}
+#Next{
+	right: 10px;
+	margin-right: -13%;/*手機-20%*/
+	top:40%;
+}
+.Breadcrumbs{
+	font-size: 14px;
+	color: rgb(65, 45, 45);
+	width: 80%;
+	margin: auto;
+	padding-bottom:30px ;
+}
+
+
+/*手機*/
+@media screen and (max-width: 767px){
+	main{
+		background-color: rgb(255, 231, 220);
+	}
+    
+	
+}
+
+
+/*平板*/
+
+@media screen and (min-width:768px){
+	.container{
+		background-image: url("texture-background.jpg");
+		background-attachment: fixed;
+	}
+
+
+	.product{
+		width: 80%;
+		border-radius: 20px;
+		margin: auto;
+		box-shadow: 10px 10px 16px -13px rgba(0,0,0,0.62);
+		display: flex;
+		padding-bottom: 30px;
+		margin-bottom: 40px;
+		background-color: #fffdfd;
+	}
+	
+	
+}
+
+
+/*桌--------------機*/
+
+@media screen and (min-width: 1200px){
+	.container{
+		background-image: url("texture-background.jpg");
+		background-attachment: fixed;
+	}
+	
+
+}

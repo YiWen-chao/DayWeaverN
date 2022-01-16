@@ -383,133 +383,6 @@ display: block;
 	border-left: 10px solid #00f0;
 }
 
-/*custom*/
-.customization{
-	width: 100%;
-}
-.customized{
-	margin-top: 10%;
-	
-}
-.active-item{
-	width: 40%;
-	text-align: center;
-	position: relative;
-}
-.hover-box{
-	position: relative;
-	overflow: hidden;
-
-}
-.hover-text{
-	position: absolute;
-	top: 50%;
-	left: 15%;
-	/*left:px*/
-	width: 60%;
-	height: 100%;
-	padding: 5%;
-	background-color: rgba(0, 44, 33, 0.452);
-	color:white;
-	transition: 1s;
-	border-radius: 10px;
-}
-.active-item:hover .hover-text{
-	 top:30%;
-}
-.active-item p{
-	font-weight: 300;
-}
-.active-item h3{
-	font-weight: 500;
-}
-.custom-item:hover .hover-text{
-	top:30%;
-}
-
-.hover-box img{
-	width: 70%;
-	margin-top: 20px;
-	box-shadow:15px 15px 20px -13px rgba(0,0,0,0.62);
-}
-.hover-text h3{
-	font-size: 18px;
-	font-weight: bold;
-	margin-bottom: 5px;
-}
-.hover-text p{
-	line-height: 1.5;
-}
-.hover-img{
-	font-size: 0;
-}
-.active-item::before{
-	content: '';
-	background-color: #FFA188;
-	position: absolute;
-	border-radius: 50%;
-	height: 30px;
-	width: 30px;
-	left: 12%;
-	z-index: 1;
-}
-.custom-hover{
-	top: 100%;
-	left: -0.4%;
-	width: 85%;
-	height: 100%;
-	margin-left: 6%;
-	background-color: rgba(0, 44, 33, 0.452);
-	color:white;
-	transition: 1s;
-	text-align: left;
-}
-.custom-items{
-	text-align: center;
-	width:60%;
-	display: flex;
-	flex-wrap: wrap;
-	
-}
-
-.custom-item{
-	width: 27%;
-	margin: 10px 20px 0 10px;
-	position: relative;
-	overflow: hidden;
-}
-.custom-item h3{
-	font-weight: 500;
-}
-.custom-item p{
-	font-weight: 300;
-}
-
-.custom-item img{
-	width: 100%;
-	margin-left:10px;
-	/* margin-bottom: 20px; */
-}
-.custom-item::before{
-	content: '';
-	background-color: #015267;
-	position: absolute;
-	left: 0;
-	border-radius: 50%;
-	height: 20px;
-	width: 20px;
-	box-shadow:10px 11px 20px -13px rgba(0,0,0,0.62);
-	z-index: 1;
-
-}
-.custom-service{
-	display: flex;
-	justify-content: flex-start;
-	
-}
-.custom{
-	margin-bottom: 40px;
-}
 
 
 /*owl-carousel*/
@@ -591,6 +464,161 @@ display: block;
 }
 
 
+/*tutorial 教學*/
+.tutorial{
+	margin-top: 100px;
+}
+.video{
+	display: flex;
+	margin: 20px;
+}
+.shorts{
+    display: flex;
+    justify-content: center;
+	width: 80%;
+	margin: auto;
+
+}
+.short{
+    text-align: center;
+    margin:20px 30px 0 30px;
+	display:block;
+	transition: .5s;
+	
+}
+.short:hover{
+	margin-top: -2px;
+}
+
+.short img{
+    width: 60%;
+	min-width: 70px;
+}
+.short h2{
+    font-size: 16px;
+    color: rgb(39, 37, 36);
+    margin-bottom: 10px;
+	font-weight: 700;
+}
+
+/*手機*/
+@media screen and (max-width: 767px){
+	.slogan-phone{
+		display: block;
+	}
+	.slogan{
+		display: none;
+	}
+	.custom-row{
+		display: flex;
+	}
+	.hover-img{
+		font-size: 0;
+		width: 100%;
+	}
+	
+	.slogan-phone h3{
+		text-align: center;
+		line-height: 2;
+		font-size: 16px;
+		margin: 20px 0;
+	}
+	.active-item .hover-box{
+		width: 80%;
+		margin: auto;
+		border: 1px solid #381500;
+		/* background-color: #ffffff; */
+		padding: 15px 15px 0 15px ;
+		border-radius: 10px;
+		box-shadow: 9px 10px 10px -13px rgba(0,0,0,0.75);
+	}
+	.active-item .hover-text{
+		font-size: 16px;
+		color: #381500;
+		margin: 20px 0;
+		text-align: center;
+	}
+	.hover-text h3{
+		font-weight: 700;
+		margin: 20px 0;
+		color: #381500;
+	}
+	.active-item .hover-box img{
+		width: 100%;
+		border-radius: 20px;
+		margin: auto;
+	}
+	.custom-items{
+		display: none;
+	}
+	.custom-hover{
+		width: 100%;
+		text-align: center;
+	}
+	.custom-item{
+		width: 100%;
+		margin: 50px 10px 0 10px;
+		display: flex;
+		background-color: #ffffff;
+		box-shadow: 9px 10px 12px -10px rgba(0,0,0,0.75);
+	}
+	.custom-item img{
+		width: 100%;
+		vertical-align: middle;
+	}
+	.icon-phone{
+		margin-top: 20px;
+		width: 15%;
+	}
+	.custom-icon-phone{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		
+	}
+	.icon-phone img{
+		width: 120%;
+	}
+	.icon-phone h3{
+		text-align: center;
+		font-weight: 700;
+		font-size: 16px;
+		width: 100%;
+		color: #535353;
+	}
+	iframe{
+		margin-left: -10%;
+	}
+	.video{
+		width: 100%;
+		text-align: center;
+	}
+	
+	.video-description{
+		width: 100%;
+		line-height: 2;
+		margin-top: 20px;
+	}
+	.video-description h3{
+		font-size: 20px;
+		font-weight: 700;
+		color:rgb(65, 45, 45);
+
+	}
+	.video-description p{
+		font-weight: 300;
+
+	}
+	.video-container{
+		padding: 20px;
+	
+	}
+	.subtitle h3{
+		text-align: center;
+		margin-top: 20px;
+	}
+}
 /*平--------------版*/
 
 
@@ -600,7 +628,7 @@ display: block;
 	}
 	.container{
 		background-image:url(bg-anime.gif);
-		background-size: 100% 20%;
+		background-size: 100% 15%;
 		background-repeat: no-repeat;
 	}
 	#words-circle1{
@@ -797,85 +825,271 @@ display: block;
     display: flex;
     /* width: 100%; */
     flex-grow: 1;
-}
-#description{
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 20px;
-    border-bottom-left-radius: 100px;
-    padding: 33px 12% 40px 33px;
-    margin-left: 10%;
-    line-height: 1.5;
-	
-}
-.anime-descript{
-	animation-name: des;
-	animation-duration: 3s;  
-  	animation-fill-mode: forwards;
-}
-@keyframes des{
-	from {right: -100px;}
-	to {top: 20px;}
-	0% {opacity: 0;}
-  /* 50% {opacity: 0;} */
-  100% {opacity: 1;}
-  }
-.description p{
-    width: 80%;
-    font-size: 16px;
-    color: rgb(87, 87, 87);
-}
+	}
+	#description{
+		width: 100%;
+		background-color: #ffffff;
+		border-radius: 20px;
+		border-bottom-left-radius: 100px;
+		padding: 33px 12% 40px 33px;
+		margin-left: 10%;
+		line-height: 1.5;
+		
+	}
+	.anime-descript{
+		animation-name: des;
+		animation-duration: 3s;  
+		animation-fill-mode: forwards;
+	}
+	@keyframes des{
+		from {right: -100px;}
+		to {top: 20px;}
+		0% {opacity: 0;}
+	/* 50% {opacity: 0;} */
+	100% {opacity: 1;}
+	}
+	.description p{
+		width: 80%;
+		font-size: 16px;
+		color: rgb(87, 87, 87);
+	}
 
-#girl-braids-img{
-    position: relative;
-    right:10%;
-    width: 65%;
-    height: 50%;
-    top:-25px;
-	display: block;
-}
-.anime-girl{
-	animation-name: example;
-	animation-duration: 3s;  
-  	animation-fill-mode: forwards;
-}
-@keyframes example {
-	from {right: -300px;}
-	to {top: 20px;}
-	0% {opacity: 0;}
-  /* 50% {opacity: 0;} */
-  100% {opacity: 1;}
-  }
-.girl-braids img{
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    z-index: 1;
-    box-shadow: 9px 10px 12px -10px rgba(0,0,0,0.75);
-	
+	#girl-braids-img{
+		position: relative;
+		right:10%;
+		width: 65%;
+		height: 50%;
+		top:-25px;
+		display: block;
+	}
+	.anime-girl{
+		animation-name: example;
+		animation-duration: 3s;  
+		animation-fill-mode: forwards;
+	}
+	@keyframes example {
+		from {right: -300px;}
+		to {top: 20px;}
+		0% {opacity: 0;}
+	/* 50% {opacity: 0;} */
+	100% {opacity: 1;}
+	}
+	.girl-braids img{
+		position: relative;
+		border-radius: 10px;
+		width: 100%;
+		z-index: 1;
+		box-shadow: 9px 10px 12px -10px rgba(0,0,0,0.75);
+		
 
-}
-#girl-braids-img::after{
-    position: absolute;
-    content:'';
-    width:80%;
-    top:20%;
-    height:90%;
-    left: 30%;
-    background-color: #DFC2B5;
-	display: block;
-}
-.item{
-	width: 150px;
-}
-.products img{
-	width: 130px;
-	height: 130px;
-}
-.hot-img img{
-	width: 200px;
-	height: 200px;
-}
+	}
+	#girl-braids-img::after{
+		position: absolute;
+		content:'';
+		width:80%;
+		top:20%;
+		height:90%;
+		left: 30%;
+		background-color: #DFC2B5;
+		display: block;
+	}
+	.item{
+		width: 150px;
+	}
+	.products img{
+		width: 130px;
+		height: 130px;
+	}
+	.hot-img img{
+		width: 200px;
+		height: 200px;
+	}
+	/*custom*/
+	.slogan-phone{
+		display: none;
+	}
+	.slogan h3{
+		text-align: center;
+		line-height: 1.5;
+		margin-top: 20px;
+	}
+	.customization{
+		width: 100%;
+	}
+	.customized{
+		margin-top: 10%;
+		
+	}
+	.active-item{
+		width: 40%;
+		text-align: center;
+		position: relative;
+	}
+	.hover-box{
+		position: relative;
+		overflow: hidden;
+
+	}
+	.hover-text{
+		position: absolute;
+		top: 50%;
+		left: 15%;
+		/*left:px*/
+		width: 60%;
+		height: 100%;
+		padding: 5%;
+		background-color: rgba(0, 44, 33, 0.452);
+		color:white;
+		transition: 1s;
+		border-radius: 10px;
+	}
+	.active-item:hover .hover-text{
+		top:30%;
+	}
+	.active-item p{
+		font-weight: 300;
+	}
+	.active-item h3{
+		font-weight: 500;
+	}
+	.custom-item:hover .hover-text{
+		top:30%;
+	}
+
+	.hover-box img{
+		width: 70%;
+		margin-top: 20px;
+		box-shadow:15px 15px 20px -13px rgba(0,0,0,0.62);
+	}
+	.hover-text h3{
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+	.hover-text p{
+		line-height: 1.5;
+	}
+	.hover-img{
+		font-size: 0;
+	}
+	.active-item::before{
+		content: '';
+		background-color: #FFA188;
+		position: absolute;
+		border-radius: 50%;
+		height: 30px;
+		width: 30px;
+		left: 12%;
+		z-index: 1;
+	}
+	.custom-hover{
+		top: 100%;
+		left: -0.4%;
+		width: 85%;
+		height: 100%;
+		margin-left: 6%;
+		background-color: rgba(0, 44, 33, 0.452);
+		color:white;
+		transition: 1s;
+		text-align: left;
+	}
+	.custom-items{
+		text-align: center;
+		width:60%;
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
+
+	.custom-item{
+		width: 27%;
+		margin: 10px 20px 0 10px;
+		position: relative;
+		overflow: hidden;
+	}
+	.custom-item h3{
+		font-weight: 500;
+	}
+	.custom-item p{
+		font-weight: 300;
+	}
+
+	.custom-item img{
+		width: 100%;
+		margin-left:10px;
+		/* margin-bottom: 20px; */
+		margin-top: 5%;
+	}
+	.custom-item::before{
+		content: '';
+		background-color: #015267;
+		position: absolute;
+		left: 0;
+		border-radius: 50%;
+		height: 20px;
+		width: 20px;
+		box-shadow:10px 11px 20px -13px rgba(0,0,0,0.62);
+		z-index: 1;
+
+	}
+	.custom-service{
+		display: flex;
+		justify-content: flex-start;
+		
+	}
+	.custom{
+		margin-bottom: 40px;
+	}
+	.custom-icon-phone{
+		display: none;
+	}
+	.shorts-phone-wrap{
+		display: flex;
+	}
+	iframe{
+		padding: 0 20px;
+	}
+	.video{
+		width: 100%;
+	}
+	.video-catagory{
+		display: flex;
+		justify-content: center;
+	}
+	.video-catagory h3{
+		padding-top: 10px;
+		line-height: 1.2;
+		width: 100px;
+		height: 50px;
+		text-align: center;
+		color: grey;
+		margin-right:40px;
+	}
+	
+	.video-description{
+		width: 80%;
+		line-height: 2;
+		margin-top: 20px;
+	}
+	.video-description h3{
+		font-size: 20px;
+		font-weight: 700;
+		color:rgb(65, 45, 45);
+		margin-left: 10px;
+	}
+	.video-description p{
+		font-weight: 300;
+		margin-left: 10px;
+	}
+	.video-container{
+		margin: 50px 50px 100px 50px;
+		display: flex;
+	
+	}
+	.subtitle h3{
+		text-align: center;
+		margin-top: 20px;
+	}
 }
 
 
@@ -887,7 +1101,7 @@ display: block;
 	}
 	.container{
 		background-image:url(bg-anime.gif);
-		background-size: 100% 20%;
+		background-size: 100% 15%;
 		background-repeat: no-repeat;
 	}
 	#logo-start{
