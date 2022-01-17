@@ -90,6 +90,8 @@ header{
 	position: fixed;
 	z-index: 3;
 	width: 100%;
+	margin: auto;
+	max-width: 1280px;
 }
 .logo img{
 	width: 70px;
